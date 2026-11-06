@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<title>CONGRATS</title>
+	<link href="card-eff.css" rel="stylesheet" />
+	<link rel="icon" href="tomas.png" type="image/x-icon"/>
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Spline+Sans+Mono:wght@400;500&display=swap');
+.card-07, .card-07 *, .card-07 *::before, .card-07 *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.card-07 {
+  width: 100%;
+  min-height: 10vh;
+  display: grid;
+  place-items: center;
+  /* background: radial-gradient(circle at 20% 20%, #ffe7c2 0%, transparent 45%), radial-gradient(circle at 80% 80%, #ffc9d4 0%, transparent 45%), #f4ede4; */
+  font-family: 'Spline Sans Mono', monospace;
+  padding: 2rem;
+}
+.card-07__card {
+  --card-07-bounce: cubic-bezier(0.34, 1.8, 0.4, 1);
+  position: relative;
+  width: 320px;
+  height: 420px;
+  border-radius: 28px;
+  /* background: linear-gradient(160deg, #1c1410 0%, #3a2618 100%); */
+  /* color: #f4ede4; */
+  cursor: pointer;
+  overflow: hidden;
+  transform-origin: bottom center;
+  transition: transform 0.55s var(--card-07-bounce), box-shadow 0.55s ease;
+  /* box-shadow: 0 10px 25px rgba(60, 30, 10, 0.25); */
+  will-change: transform;
+}
+.card-07__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: radial-gradient(circle at 50% 120%, #ff8a3c 0%, transparent 60%); */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.card-07__card:hover {
+  transform: translateY(-26px) scale(1.04);
+  /* box-shadow: 0 40px 60px rgba(60, 30, 10, 0.4); */
+}
+.card-07__card:hover::before {
+  opacity: 0.55;
+}
+.card-07__inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 2.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-07__tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  text-align: center;
+  /* color: #ffb27a; */
+}
+.card-07__num {
+  font-family: 'Fraunces', serif;
+  font-size: 5.5rem;
+  font-weight: 900;
+  line-height: 0.85;
+  text-align: center;
+  transition: transform 0.55s var(--card-07-bounce);
+}
+.card-07__card:hover .card-07__num {
+  transform: translateY(-6px);
+}
+.card-07__title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.1;
+  text-align: center;
+}
+.card-07__desc {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  /* color: #cdb9a6; */
+  max-width: 90%;
+  text-align: center;
+}
+/* .card-07__dot {
+  position: absolute;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  /* background: #ff8a3c; */
+  box-shadow: 0 0 0 0 rgba(255, 138, 60, 0.6);
+  transition: box-shadow 0.5s ease;
+} */
+.card-07__card:hover .card-07__dot {
+  box-shadow: 0 0 0 10px rgba(255, 138, 60, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-07__card, .card-07__num, .card-07__dot {
+    transition: none !important;
+  }
+}
+</style>
+<body>
+<div style="text-align: center; padding-top: 10rem;">
+<h1>
+    Gratulujem ti
+</h1>
+<p>a tu je tvoj </p>
+    <b>diplom</b>
+</div>
+    <!---->
+    <div class="card-07">
+      <article class="card-07__card">
+        <div class="card-07__inner">
+          <span class="card-07__tag"><b>Tomáš</b> (Nigger) <b>Obrcian</b></span>
+          <div>
+            <div class="card-07__num">2</div>
+          </div>
+          <div>
+            <h2 class="card-07__title">Šach<br></h2>
+          </div>
+        </div>
+        <span class="card-07__dot"></span>
+      </article>
+    </div>
+<!---->
+</body>
+</html>
